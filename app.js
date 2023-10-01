@@ -149,7 +149,7 @@ app.get("/districts/:districtId/details/", async (request, response) => {
   const { districtId } = request.params;
   const districtQuery = `
     SELECT 
-        state_name
+        state_name AS stateName
     FROM 
     district JOIN state
     ON district.state_id = state.state_id
